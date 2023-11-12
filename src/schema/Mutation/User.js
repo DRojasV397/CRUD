@@ -34,7 +34,6 @@ const DELETE_USER = {
         }
         else{
             const result = user.destroy()
-            console.log(result)
             return true
         }
     }

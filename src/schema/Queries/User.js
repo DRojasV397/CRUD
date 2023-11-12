@@ -5,7 +5,9 @@ const UserType = require('../typeDefs/User');
 const GET_ALL_USERS = {
     type: new GraphQLList(UserType),
     async resolve() {
-        return await Usuario.findAll();
+        const users = await Usuario.findAll()
+        console.log(users)
+        return users;
     }
 }
 
@@ -17,7 +19,7 @@ const GET_USER = {
     async resolve(root, args) {
         const user = await Usuario.findOne({where: {id: args.id}})
         if(!user){
-            console.log(null)
+            console.log(user)
         }
         else{
             console.log(user.dataValues)

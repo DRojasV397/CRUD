@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta y Operaciones GraphQL desde Frontend</title>
+</head>
+<body>
+    <h1>Consulta y Operaciones GraphQL</h1>
+    
+    <div>
+        <h2>Menú de Operaciones</h2>
+        <select id="operacionSelect">
+            <option value="consultar">Consultar Todos los Usuarios</option>
+            <option value="crear">Crear Nuevo Usuario</option>
+        </select>
+        <button onclick="realizarOperacion()">Realizar Operación</button>
+    </div>
+
+    <div id="resultados"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
